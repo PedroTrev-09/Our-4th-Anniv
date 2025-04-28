@@ -1,0 +1,229 @@
+/* Import Font Romantis */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Quicksand:wght@400;600&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand', sans-serif; /* Font dasar */
+    background-color: #fff0f5; /* Warna fallback jika gambar gagal load */
+    background-image: url('https://images.unsplash.com/photo-1522383225653-ed11118ca596?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80'); /* URL Gambar Bunga Sakura */
+    background-size: cover; /* Menutupi seluruh area */
+    background-position: center center; /* Posisi gambar di tengah */
+    background-attachment: fixed; /* Gambar tetap saat scroll */
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Minimal setinggi layar */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.85); /* Background semi-transparan */
+    padding: 30px 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    max-width: 800px; /* Lebar maksimum konten */
+    width: 100%;
+    text-align: center;
+    transition: all 0.5s ease-in-out; /* Animasi halus */
+}
+
+header h1 {
+    font-family: 'Dancing Script', cursive; /* Font judul romantis */
+    font-size: 4em; /* Ukuran font besar */
+    color: #ff69b4; /* Warna pink */
+    margin-bottom: 0;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+header .subtitle {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.8em;
+    color: #db7093; /* Pink sedikit lebih gelap */
+    margin-top: -10px;
+    margin-bottom: 30px;
+}
+
+.hidden {
+    display: none; /* Sembunyikan elemen secara default */
+    opacity: 0; /* Mulai dengan transparan */
+    transform: translateY(20px); /* Mulai sedikit ke bawah */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* Animasi fade dan slide */
+}
+
+.visible {
+    display: block; /* Tampilkan elemen */
+    opacity: 1; /* Buat solid */
+    transform: translateY(0); /* Kembali ke posisi normal */
+}
+
+.content-box {
+    background-color: rgba(255, 240, 245, 0.9); /* Lavender blush semi-transparan */
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    text-align: left; /* Ratakan teks ke kiri dalam box */
+    border: 1px solid #ffc0cb; /* Border pink tipis */
+}
+
+.intro-box, .final-note-box {
+    text-align: center; /* Khusus intro dan final note, tengahkan teks */
+    font-size: 1.2em;
+    font-weight: 600;
+    color: #555;
+}
+
+.habits-box h3 {
+    color: #ff69b4; /* Judul list pink */
+    margin-top: 0;
+    border-bottom: 1px dashed #ffb6c1;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.habits-box ul {
+    list-style: none; /* Hilangkan bullet points default */
+    padding-left: 0;
+}
+
+.habits-box li {
+    margin-bottom: 15px; /* Jarak antar item list */
+    padding-left: 25px;
+    position: relative;
+}
+
+.habits-box li::before {
+    content: '🌸'; /* Ganti bullet dengan bunga sakura kecil */
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #ff69b4;
+}
+
+.habits-box strong {
+    color: #db7093; /* Warna pink tua untuk bagian penting */
+}
+
+.message-box {
+    text-align: justify; /* Ratakan teks pesan */
+    font-size: 1.1em;
+    line-height: 1.8;
+}
+
+.message-box h2 {
+     font-family: 'Dancing Script', cursive;
+     font-size: 2.5em;
+     color: #ff69b4;
+     text-align: center;
+     margin-bottom: 20px;
+}
+
+.message-box .closing {
+    text-align: right;
+    margin-top: 30px;
+    font-style: italic;
+    color: #db7093;
+    font-weight: 600;
+}
+
+.final-note-box p {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.8em;
+    color: #ff1493; /* Deep Pink */
+    margin: 0;
+    line-height: 1.3;
+}
+
+.btn {
+    font-family: 'Quicksand', sans-serif;
+    background-color: #ff9ac4; /* Warna dasar tombol pink */
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px; /* Tombol bulat */
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin: 10px 5px; /* Jarak antar tombol */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover {
+    background-color: #ff7eb9; /* Warna lebih gelap saat hover */
+    transform: translateY(-2px); /* Sedikit naik saat hover */
+}
+
+.btn:active {
+    transform: translateY(1px); /* Efek ditekan */
+}
+
+.btn-start {
+    font-size: 1.4em;
+    padding: 15px 35px;
+    background-color: #ff69b4; /* Pink lebih menyala */
+}
+
+.btn-habit {
+    background-color: #ffb6c1; /* Light Pink */
+}
+.btn-habit:hover {
+    background-color: #ffa0b1;
+}
+
+.btn-next {
+    display: block; /* Agar tombol jadi full width di boxnya */
+    width: calc(100% - 40px); /* Sesuaikan lebar */
+    margin: 20px auto 0 auto; /* Tengahkankan */
+    background-color: #98fb98; /* Hijau muda untuk "lanjut" */
+    color: #333;
+}
+.btn-next:hover {
+     background-color: #87e987;
+}
+
+
+.btn-reveal {
+     background-color: #87ceeb; /* Sky blue */
+     font-size: 1.2em;
+}
+.btn-reveal:hover {
+    background-color: #76c1e5;
+}
+
+.btn-final {
+     background-color: #ffd700; /* Gold */
+     color: #555;
+}
+.btn-final:hover {
+    background-color: #ffcc00;
+}
+
+.button-group {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Responsiveness untuk layar kecil */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 3em;
+    }
+    header .subtitle {
+        font-size: 1.5em;
+    }
+    .container {
+        padding: 20px;
+    }
+    .btn {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+    .btn-start {
+        font-size: 1.2em;
+        padding: 12px 30px;
+    }
+}
